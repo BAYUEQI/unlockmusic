@@ -1,20 +1,6 @@
 # Unlock Music 音乐解锁
 
-[![Build Status](https://git.unlock-music.dev/um/web/actions/workflows/build.yml/badge.svg)][ci]
 
-- 在浏览器中解锁加密的音乐文件。 Unlock encrypted music file in the browser.
-- Unlock Music 项目是以学习和技术研究的初衷创建的，修改、再分发时请遵循[授权协议]。
-- Unlock Music 的 CLI 版本可以在 [unlock-music/cli] 找到，大批量转换建议使用 CLI 版本。
-- 我们新建了 Telegram 群组 [`@unlock_music_chat`] ，欢迎加入！
-- CI 自动构建已经部署，可以在 [Actions][ci] 下载
-
-> **WARNING**
-> 在本站 fork 不会起到备份的作用，只会浪费服务器储存空间。如无必要请勿 fork 该仓库。
-
-[授权协议]: https://git.unlock-music.dev/um/web/src/branch/main/LICENSE
-[unlock-music/cli]: https://git.unlock-music.dev/um/cli
-[`@unlock_music_chat`]: https://t.me/unlock_music_chat
-[ci]: https://git.unlock-music.dev/um/web/actions?workflow=build.yml
 
 ## 特性
 
