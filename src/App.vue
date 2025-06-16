@@ -5,20 +5,11 @@
     </el-main>
     <el-footer id="app-footer">
       <div>
-        <a href="https://git.unlock-music.dev/um/web" target="_blank">音乐解锁</a>({{ version }})
+        <a href="https://github.com/BAYUEQI/unlockmusic" target="_blank">音乐解锁</a>({{ version }})
         ：移除已购音乐的加密保护。
-        <a href="https://git.unlock-music.dev/um/web/wiki/使用提示" target="_blank">使用提示</a>
       </div>
       <div>
         目前支持 网易云音乐(ncm), QQ音乐(qmc, mflac, mgg), 酷狗音乐(kgm), 虾米音乐(xm), 酷我音乐(.kwm)
-        <a href="https://git.unlock-music.dev/um/web/src/branch/main/README.md" target="_blank">更多</a>。
-      </div>
-      <div>
-        <!--如果进行二次开发，此行版权信息不得移除且应明显地标注于页面上-->
-        <span>Copyright &copy; 2019 - {{ new Date().getFullYear() }} MengYX</span>
-        音乐解锁使用
-        <a href="https://git.unlock-music.dev/um/web/src/branch/main/LICENSE" target="_blank">MIT许可协议</a>
-        开放源代码
       </div>
     </el-footer>
   </el-container>
