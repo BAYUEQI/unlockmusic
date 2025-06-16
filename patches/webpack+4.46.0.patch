@@ -1,0 +1,26 @@
+diff --git a/node_modules/webpack/lib/optimize/SplitChunksPlugin.js b/node_modules/webpack/lib/optimize/SplitChunksPlugin.js
+index e7d560b..94a8401 100644
+--- a/node_modules/webpack/lib/optimize/SplitChunksPlugin.js
++++ b/node_modules/webpack/lib/optimize/SplitChunksPlugin.js
+@@ -22,7 +22,7 @@ const deterministicGroupingForModules = /** @type {function(DeterministicGroupin
+ 
+ const hashFilename = name => {
+ 	return crypto
+-		.createHash("md4")
++		.createHash("sha256")
+ 		.update(name)
+ 		.digest("hex")
+ 		.slice(0, 8);
+diff --git a/node_modules/webpack/lib/util/createHash.js b/node_modules/webpack/lib/util/createHash.js
+index 64de510..4cc3fc9 100644
+--- a/node_modules/webpack/lib/util/createHash.js
++++ b/node_modules/webpack/lib/util/createHash.js
+@@ -131,6 +131,8 @@ module.exports = algorithm => {
+ 		// TODO add non-cryptographic algorithm here
+ 		case "debug":
+ 			return new DebugHash();
++		case 'md4':
++			algorithm = "sha256";
+ 		default:
+ 			return new BulkUpdateDecorator(require("crypto").createHash(algorithm));
+ 	}

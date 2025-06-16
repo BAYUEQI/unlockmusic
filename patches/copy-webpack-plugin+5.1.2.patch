@@ -1,0 +1,13 @@
+diff --git a/node_modules/copy-webpack-plugin/dist/postProcessPattern.js b/node_modules/copy-webpack-plugin/dist/postProcessPattern.js
+index 8354f00..9bdf6ed 100644
+--- a/node_modules/copy-webpack-plugin/dist/postProcessPattern.js
++++ b/node_modules/copy-webpack-plugin/dist/postProcessPattern.js
+@@ -69,7 +69,7 @@ function postProcessPattern(globalRef, pattern, file) {
+             name: _package.name,
+             version: _package.version,
+             pattern,
+-            hash: _crypto.default.createHash('md4').update(content).digest('hex')
++            hash: _crypto.default.createHash('sha256').update(content).digest('hex')
+           });
+           return _cacache.default.get(globalRef.cacheDir, cacheKey).then(result => {
+             logger.debug(`getting cached transformation for '${file.absoluteFrom}'`);

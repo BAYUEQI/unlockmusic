@@ -1,0 +1,21 @@
+diff --git a/node_modules/babel-loader/lib/cache.js b/node_modules/babel-loader/lib/cache.js
+index fced210..6b0c137 100644
+--- a/node_modules/babel-loader/lib/cache.js
++++ b/node_modules/babel-loader/lib/cache.js
+@@ -91,15 +91,7 @@ const write = /*#__PURE__*/function () {
+ 
+ 
+ const filename = function (source, identifier, options) {
+-  // md4 hashing is not supported starting with node v17.0.0
+-  const majorNodeVersion = parseInt(process.versions.node.split(".")[0], 10);
+-  let hashType = "md4";
+-
+-  if (majorNodeVersion >= 17) {
+-    hashType = "md5";
+-  }
+-
+-  const hash = crypto.createHash(hashType);
++  const hash = crypto.createHash("sha256");
+   const contents = JSON.stringify({
+     source,
+     options,

@@ -1,0 +1,42 @@
+name: Build
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/**/*"
+      - "package.json"
+      - "package-lock.json"
+  pull_request:
+    branches: [ main ]
+    types: [ opened, synchronize, reopened ]
+    paths:
+      - "src/**/*"
+      - "package.json"
+      - "package-lock.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout codebase
+        uses: actions/checkout@v4
+
+      - name: Set up node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+      - name: Build all variants
+        run: npm run build:all
+
+      - name: Publish artifact
+        uses: christopherhx/gitea-upload-artifact@v4
+        with:
+          name: um-web-all
+          path: "um-*.zip"
