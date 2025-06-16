@@ -1,3 +1,20 @@
+<template>
+  <el-container id="app">
+    <el-main>
+      <Home />
+    </el-main>
+    <el-footer id="app-footer">
+      <div>
+        <a href="https://github.com/BAYUEQI/unlockmusic" target="_blank">音乐解锁</a>({{ version }})
+        ：移除已购音乐的加密保护。
+      </div>
+      <div>
+        目前支持 网易云音乐(ncm), QQ音乐(qmc, mflac, mgg), 酷狗音乐(kgm), 虾米音乐(xm), 酷我音乐(.kwm)
+      </div>
+    </el-footer>
+  </el-container>
+</template>
+
 <script>
 import FileSelector from '@/component/FileSelector';
 import PreviewTable from '@/component/PreviewTable';
