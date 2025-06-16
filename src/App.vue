@@ -68,7 +68,6 @@ export default {
                             <div class="update-title">最近更新</div>
                             <div class="update-content"> ${config.updateInfo} </div>
                         </div>
-                        <a target="_blank" href="https://git.unlock-music.dev/um/web/wiki/使用提示">使用提示</a>
                     </div>`,
           dangerouslyUseHTMLString: true,
           duration: 10000,
