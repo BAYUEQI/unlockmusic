@@ -27,15 +27,7 @@
 - [x] 多线程
 - [x] 写入和编辑元信息与专辑封面
 
-## 使用方法
 
-### 使用预构建版本
-
-- 从 [Release] 或 [CI 构建][ci] 下载预构建的版本
-  - :warning: 本地使用请下载`legacy版本`（`modern版本`只能通过 **http(s)协议** 访问）
-- 解压缩后即可部署或本地使用（**请勿直接运行源代码**）
-
-[release]: https://git.unlock-music.dev/um/web/releases/latest
 
 ### 自行构建
 
